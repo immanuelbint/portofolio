@@ -4,7 +4,7 @@ import { siteConfig } from "../config";
 
 <div
   id="hero"
-  class="relative isolate overflow-hidden bg-white py-24 md:h-screen"
+  class="relative isolate overflow-hidden bg-gradient-to-b from-white to-gray-100 py-24 md:h-screen"
   style={`--accent-color: ${siteConfig.accentColor}`}
 >
   <!-- Gradient overlay -->
@@ -129,27 +129,38 @@ import { siteConfig } from "../config";
       height="100%"
       stroke-width={0}></rect>
   </svg>
-  <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
-    <div>
-      <h2
-        class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in"
-      >
-        Hello! 👋
-      </h2>
-      <h1
-        class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
-      >
-        I'm <span style={{ color: siteConfig.accentColor }}
-          >{siteConfig.name}</span
-        >
-      </h1>
-      <p
-        class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
-      >
-        {siteConfig.title}
-      </p>
-    </div>
+  <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex flex-col md:flex-row items-center gap-10">
+  <!-- Bagian teks -->
+  <div class="flex-1">
+    <h2
+      class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in"
+    >
+      Hello! 👋
+    </h2>
+    <h1
+      class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
+    >
+      I'm <span style={{ color: siteConfig.accentColor }}>
+        {siteConfig.name}
+      </span>
+    </h1>
+    <p
+      class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl font-medium text-gray-600 animate-fade-in animation-delay-400"
+    >
+      {siteConfig.title}
+    </p>
   </div>
+
+  <div class="flex-shrink-0 animate-fade-in animation-delay-600">
+      <div class="backdrop-blur-md bg-black/20 p-2 rounded-full shadow-xl">
+        <img
+          src={siteConfig.profileImage}
+          alt={siteConfig.name}
+          class="rounded-full w-72 h-72"
+        />
+      </div>
+  </div>
+</div>
   <div
     class="absolute bottom-0 left-0 right-0 p-8 sm:p-12 md:p-24 flex gap-x-4 sm:gap-x-6 md:gap-x-8 text-gray-700 animate-fade-in animation-delay-600"
   >

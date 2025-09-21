@@ -1,0 +1,56 @@
+---
+import { siteConfig } from "../config";
+const hasCerts = siteConfig.certs && siteConfig.certs.length > 0;
+---
+
+{hasCerts && (
+  <section id="certs" class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+      <div class="lg:col-span-4">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+          Certs
+        </h2>
+        <div
+          class="w-[75px] h-[5px] mt-2 rounded-full"
+          style={`background-color: ${siteConfig.accentColor}`}
+        />
+      </div>
+
+      <div class="lg:col-span-8">
+        <div class="space-y-8">
+          {siteConfig.certs.map((cert) => (
+            <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-2">
+                <div>
+                  <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
+                    {cert.name}
+                  </h3>
+                  <p
+                    class="text-sm sm:text-base"
+                    style={`color: ${siteConfig.accentColor}`}
+                  >
+                    {cert.issuer}
+                  </p>
+                </div>
+                <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
+                  {cert.date}
+                </span>
+              </div>
+
+              {cert.link && (
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm font-medium text-blue-600 hover:underline"
+                >
+                  View Credential
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+)}
