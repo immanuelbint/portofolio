@@ -1,54 +1,53 @@
 export const siteConfig = {
-  name: "Immanuel Bintang",
-  title: "System Administrator",
+  name: "Immanuel Bintang Putra Widianto",
+  title: "System Administrator | Exploring DevOps & Cloud",
   description: "Portfolio website of Immanuel Bintang",
   accentColor: "#1d4ed8",
-  profileImage: "/profile.jpg",
+  profileImage: "https://avatars.githubusercontent.com/u/106735816?v=4",
   social: {
     email: "mail@immanuelbint.com",
     linkedin: "https://linkedin.com/in/immanuelbint",
     github: "https://github.com/immanuelbint",
   },
-  aboutMe:
-    "My name is Immanuel, System Administrator with 3 years in tech, experienced in automation, monitoring, and support. Currently exploring DevOps and AWS to move into cloud engineering. I love working with teams and finding ways to make systems faster and more reliable.",
+  aboutMe: [
+    "Hi, I’m a System Administrator with 3 years of experience in automation, monitoring, and support.",
+    "My work has focused on automating infrastructure, providing tier 2 support, maintaining system documentation and setting up monitoring solutions to improve system stability.",
+    "I enjoy working with teams to build systems that are faster, more reliable, and easier to scale. Recently, I’ve been diving deeper into DevOps practices and AWS cloud services, aiming to grow into cloud engineering roles."
+  ],
   skills: [
     "Linux",
     "Bash",
-    "AWS (EC2, S3, IAM, VPC, CloudWatch",
+    "AWS",
     "Docker",
     "Kubernetes",
     "Terraform",
+    "Ansible",
     "Prometheus & Grafana",
     "Networking & Security",
   ],
   projects: [
     {
-      name: "Personal Documentation site",
-      description:
-        "Developed and maintained a documentation site using VitePress and GitHub Pages to publish notes and practical guides on Linux, Ansible, and DevOps tooling, aimed at reinforcing hands-on learning.",
-      link: "https://docs.immanuelbint.com",
-      skills: ["VitePress", "GitHub Pages", "Linux"],
-    },
-    {
       name: "AWS Labs",
       description:
-        "AWS overview, hands-on labs, and mini-projects aimed at building my skills in AWS and cloud engineering. The main goal of this repository is to document my hands-on learning process, keep track of scripts, configurations, and insights gained while practicing AWS services and DevOps-related tasks.",
+        "A collection of hands-on AWS labs and mini-projects documenting my journey in cloud engineering. Focused on learning AWS services, scripting, monitoring, and automation while building a foundation in DevOps practices.",
       link: "https://github.com/immanuelbint/aws-cloud-labs",
       skills: ["AWS", "CloudWatch", "IAM", "EC2", "S3", "VPC"],
+      status: "done",
     },
     {
       name: "IaC Labs",
       description:
-        "IaC overview, hands-on labs, and mini-projects aimed at continuously building my skills in Infrastructure as Code and learn the best practices.",
+        "A set of Infrastructure as Code labs and experiments to explore automation, Terraform, and CloudFormation. Designed to strengthen IaC fundamentals and apply best practices in managing infrastructure.",
       link: "https://github.com/immanuelbint/iac-labs",
       skills: ["Automation", "IaC", "Terraform", "CloudFormation"],
+      status: "done",
     },
     {
       name: "Terraform Tier-3 Web Deployment",
       description:
-        "Work-in-progress project to deploy a 3-tier web application (frontend, backend, database) on AWS using Terraform modules and best practices.",
-      // link: "",
-      skills: ["Terraform", "AWS", "Infrastructure as Code", "Cloud Architecture"],
+        "Work-in-progress deployment of a 3-tier web application (frontend, backend, database) on AWS. Built with Terraform modules, following cloud architecture best practices.",
+      skills: ["Terraform", "AWS", "IaC", "Cloud Architecture"],
+      status: "wip",
     },
   ],
   experience: [
@@ -83,5 +82,26 @@ export const siteConfig = {
       date: "2025 - 2028",
       link: "https://www.credly.com/badges/fd6678d0-748e-4fde-9f95-fc427bba4781/public_url",
     },
+  ],
+  contact: [
+    {
+      type: "Email",
+      value: "yourname@example.com",
+      link: "mailto:yourname@example.com"
+    },
+    {
+      type: "LinkedIn",
+      value: "linkedin.com/in/yourprofile",
+      link: "https://linkedin.com/in/yourprofile"
+    },
+    {
+      type: "GitHub",
+      value: "github.com/yourprofile",
+      link: "https://github.com/yourprofile"
+    },
+    {
+      type: "Location",
+      value: "Central Java, Indonesia"
+    }
   ],
 };
