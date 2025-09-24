@@ -26,12 +26,12 @@ const theme = palettes[palette];
 
 <div
   id="hero"
-  class="relative isolate overflow-hidden py-24 md:h-screen flex flex-col justify-center"
+  class="relative isolate overflow-hidden py-16 sm:py-20 md:h-screen flex flex-col justify-center"
   style={`--accent-color: ${siteConfig.accentColor}; background: ${theme.background}; color: ${theme.text}`}
 >
   <!-- Animated Stars -->
   <div class="absolute inset-0 -z-10 overflow-hidden">
-    {Array.from({ length: 50 }).map((_, i) => (
+    {Array.from({ length: 40 }).map((_, i) => (
       <div
         class="star"
         style={`top:${Math.random() * 100}%; left:${Math.random() * 100}%; background:${theme.star}`}
@@ -40,20 +40,20 @@ const theme = palettes[palette];
   </div>
 
   <!-- Hero content -->
-  <div class="h-full mx-auto px-6 flex flex-col items-center justify-center text-center space-y-4">
-  <h1
-    class="font-bold tracking-tight text-white text-center leading-tight mb-2"
-    style="font-size: clamp(2rem, 5vw, 3.5rem);"
-  >
-    {siteConfig.name}
-  </h1>
+  <div class="mx-auto px-6 flex flex-col items-center text-center space-y-4">
+    <h1
+      class="font-bold tracking-tight text-white leading-tight mb-2 opacity-0 animate-[fadeIn_1s_ease-in-out_forwards]"
+      style="font-size: clamp(2rem, 5vw, 3.5rem); animation-delay:0.2s;"
+    >
+      {siteConfig.name}
+    </h1>
 
-    <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 font-medium tracking-wide">
+    <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 font-medium tracking-wide opacity-0 animate-[fadeIn_1s_ease-in-out_forwards]" style="animation-delay:0.4s;">
       {siteConfig.title}
     </p>
 
     <!-- Socials -->
-    <div class="flex gap-x-6 animate-fade-in animation-delay-600">
+    <div class="flex gap-x-6 flex-wrap justify-center opacity-0 animate-[fadeIn_1s_ease-in-out_forwards]" mb-12 style="animation-delay:0.6s;">
       {siteConfig.social?.email && (
         <a href={`mailto:${siteConfig.social.email}`} aria-label="Email" class="hover:text-[var(--accent-color)] transition">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -80,14 +80,14 @@ const theme = palettes[palette];
   </div>
 
   <!-- Scroll Down -->
-  <div class="absolute bottom-8 left-0 right-0 flex justify-center animate-fade-in animation-delay-800">
-  <div class="flex flex-col items-center text-white">
-    <span class="text-sm mb-2">Scroll Down</span>
-    <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-      <div class="w-2 h-2 bg-white rounded-full animate-bounce mt-2"></div>
+  <div class="absolute bottom-8 left-0 right-0 hidden sm:flex justify-center animate-fade-in animation-delay-800">
+    <div class="flex flex-col items-center text-white">
+      <span class="text-sm mb-2">Scroll Down</span>
+      <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+        <div class="w-2 h-2 bg-white rounded-full animate-bounce mt-2"></div>
+      </div>
     </div>
   </div>
-</div>
 
 <style>
   .star {
@@ -101,5 +101,13 @@ const theme = palettes[palette];
   @keyframes twinkle {
     from { opacity: 0.2; transform: scale(1); }
     to { opacity: 1; transform: scale(1.5); }
+  }
+  @keyframes twinkle {
+      from { opacity: 0.2; transform: scale(1); }
+      to { opacity: 1; transform: scale(1.5); }
+  }
+  @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
   }
 </style>
