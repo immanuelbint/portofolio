@@ -56,12 +56,14 @@ export const siteConfig = {
       title: "System Administrator",
       dateRange: "Jun 2022 - Present",
       bullets: [
-        "Administer Linux (RHEL/Debian) and Windows servers in a hybrid environment.",
+        "Automated infrastructure provisioning with Terraform and configuration workflows with Ansible, leading to faster and more consistent deployments.",
+        "Built and tested GitLab CI/CD pipelines in staging and personal projects, collaborating with DevOps engineers for production exposure.",
+        "Implemented monitoring and alerting with Prometheus, Grafana, and Uptime Kuma, improving reliability and response times.",
+        "Administered Linux (RHEL/Debian) and Windows servers in a hybrid environment.",
+        "Supported and maintained a Hadoop-based data platform for real-time and batch workflows.",
         "Secured systems through regular patching, audits, and compliance checks.",
-        "Provided operational support for a Hadoop-based data platform, helping to maintain real-time and batch data workflows.",
         "Handled backup and recovery operations and contributed to disaster recovery planning for critical systems.",
         "Provided Tier 2/3 support and maintained system documentation and knowledge bases.",
-        "Implemented monitoring and alerting solutions using Prometheus and Uptime Kuma, and visualized metrics with Grafana to ensure system reliability and performance.",
       ],
     },
   ],
@@ -82,26 +84,5 @@ export const siteConfig = {
       date: "2025 - 2028",
       link: "https://www.credly.com/badges/fd6678d0-748e-4fde-9f95-fc427bba4781/public_url",
     },
-  ],
-  contact: [
-    {
-      type: "Email",
-      value: "yourname@example.com",
-      link: "mailto:yourname@example.com"
-    },
-    {
-      type: "LinkedIn",
-      value: "linkedin.com/in/yourprofile",
-      link: "https://linkedin.com/in/yourprofile"
-    },
-    {
-      type: "GitHub",
-      value: "github.com/yourprofile",
-      link: "https://github.com/yourprofile"
-    },
-    {
-      type: "Location",
-      value: "Central Java, Indonesia"
-    }
   ],
 };
