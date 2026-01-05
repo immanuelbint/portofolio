@@ -46,6 +46,7 @@ export const siteConfig = {
       name: "Kubernetes Automation Labs",
       description:
         "Automates the provisioning and configuration of a Kubernetes cluster using Terraform and Ansible on KVM (Libvirt).",
+      link: "https://github.com/immanuelbint/k8s-automation-lab",
       skills: ["Terraform", "Kubernetes", "IaC", "Ansible"],
       status: "done",
     },
