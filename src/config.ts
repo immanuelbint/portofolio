@@ -12,7 +12,7 @@ export const siteConfig = {
   aboutMe: [
     "Hi, I’m a System Administrator with 3 years of experience in automation, monitoring, and support.",
     "My work has focused on automating infrastructure, providing tier 2 support, maintaining system documentation and setting up monitoring solutions to improve system stability.",
-    "I enjoy working with teams to build systems that are faster, more reliable, and easier to scale. Recently, I’ve been diving deeper into DevOps practices and AWS cloud services, aiming to grow into cloud engineering roles."
+    "I enjoy working with teams to build systems that are faster, more reliable, and easier to scale. Recently, I’ve been diving deeper into DevOps practices and AWS cloud services, aiming to grow into cloud and devops engineering roles."
   ],
   skills: [
     "Linux",
@@ -43,11 +43,11 @@ export const siteConfig = {
       status: "done",
     },
     {
-      name: "Terraform Tier-3 Web Deployment",
+      name: "Kubernetes Automation Labs",
       description:
-        "Work-in-progress deployment of a 3-tier web application (frontend, backend, database) on AWS. Built with Terraform modules, following cloud architecture best practices.",
-      skills: ["Terraform", "AWS", "IaC", "Cloud Architecture"],
-      status: "wip",
+        "Automates the provisioning and configuration of a Kubernetes cluster using Terraform and Ansible on KVM (Libvirt).",
+      skills: ["Terraform", "Kubernetes", "IaC", "Ansible"],
+      status: "done",
     },
   ],
   experience: [
@@ -63,7 +63,7 @@ export const siteConfig = {
         "Supported and maintained a Hadoop-based data platform for real-time and batch workflows.",
         "Secured systems through regular patching, audits, and compliance checks.",
         "Handled backup and recovery operations and contributed to disaster recovery planning for critical systems.",
-        "Provided Tier 2/3 support and maintained system documentation and knowledge bases.",
+        "Provided Tier 2 support and maintained system documentation and knowledge bases.",
       ],
     },
   ],
